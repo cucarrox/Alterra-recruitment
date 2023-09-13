@@ -1,0 +1,121 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+}
+
+/*===== Cabecalho =====*/
+
+header {
+    font-family: 'Exo', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.header-alterralogo {
+    width: 65px;
+    margin-left: 20px;
+}
+.header-AlterraText {
+    width: 140px;
+    margin-left: 5px;
+}
+
+.left-header-logo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.right-header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+/* Links */
+.hover1, .hover2, .hover3 {
+    padding: 15px;
+    margin: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.index {
+    margin: 0;
+
+}
+/* Efeito Hover Home */
+.hover1 {
+    position: relative;
+    color: white;
+}
+.hover1:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.cta1:hover .hover1:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Efeito Hover Sobre */
+.hover2 {
+    position: relative;
+    color: white;
+}
+.hover2:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.cta2:hover .hover2:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Efeito Hover Alistamento */
+.hover3 {
+    position: relative;
+    color: white;
+}
+.hover3:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.cta3:hover .hover3:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

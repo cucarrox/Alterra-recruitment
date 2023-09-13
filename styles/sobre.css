@@ -1,0 +1,112 @@
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-text {
+    width: 53%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+
+h1 {
+    margin: 20px;
+    font-family: 'Black Ops One', cursive;
+    font-weight: 400;
+    font-size: 50px;
+}
+section p {
+    margin: 20px;
+    font-family: 'Exo', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+/*==== Textos e imagens ====*/
+
+/* text 2 */
+.text-2 {
+    display: flex;
+}
+
+.text-2-div-img {
+    width: 52%;
+    display: flex;
+    align-items: center;
+} .text-2-div-img img {
+    margin: 10px;
+    width: 500px;
+}
+
+.text-2-div-text {
+    width: 50%;
+}
+
+/* texto 4 */
+.text-4 {
+    display: flex;
+}
+
+.text-4-div-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} .text-4-div-img img {
+    width: 400px;
+}
+
+.text-4-div-text {
+    width: 50%;
+}
+
+/* texto 5 */
+.text-5 {
+    display: flex;
+}
+
+.text-5-div-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+} .text-5-div-img img {
+    width: 400px;
+}
+
+/* text0 7 */
+.text-7 {
+    display: flex;
+}
+
+.text-.text-7-div-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}.text-7-div-img img {
+    width: 500px;
+}
+
+.final-sobre-content {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+} .final-content-img-1 {
+    width: 200px;
+} .final-content-img-2 {
+    width: 400px;
+    height: 110px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
