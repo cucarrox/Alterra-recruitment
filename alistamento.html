@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/alistamento.css">
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="styles/alistamento.css">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -36,27 +36,94 @@
             </video>
         </section>
         <section class="left-section">
-            <div class="form-control">
-                <input required="" type="value">
-                <label>
-                    <span style="transition-delay:350ms">N</span>
-                    <span style="transition-delay:300ms">o</span>
-                    <span style="transition-delay:250ms">m</span>
-                    <span style="transition-delay:200ms">e</span>
-                </label>
-            </div>
-            <div class="form-control">
-                <input required="" type="number">
-                <label>
-                    <span style="transition-delay:350ms">C</span>
-                    <span style="transition-delay:300ms">P</span>
-                    <span style="transition-delay:250ms">F</span>
-                </label>
-            </div>
+            <form action="">
+                <!--CPF e NOME-->
+                <fieldset class="campo-nome-cpf">
+                    <div class="form-control">
+                        <input required="" type="value">
+                        <label>
+                            <span style="transition-delay:300ms">N</span>
+                            <span style="transition-delay:250ms">o</span>
+                            <span style="transition-delay:200ms">m</span>
+                            <span style="transition-delay:100ms">e</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input required="" type="text" id="cpf" maxlength="14" oninput="formatCPF(this)">
+                        <label for="cpf">
+                            <span style="transition-delay:300ms">C</span>
+                            <span style="transition-delay:200ms">P</span>
+                            <span style="transition-delay:100ms">F</span>
+                        </label>
+                    </div>
+                </fieldset>
+                <!--Estado Cívil-->
+                <fieldset class="campo-estado">
+                    <div class="questions-1">
+                        <div class="quest-3">
+                            <label for="civil-state"><strong>------------- Qual o seu estado civil? -------------</strong></label>
+                            <div class="quest-3-quests">
+                                <label>
+                                    <input type="radio" name="civil-state" id="">
+                                    Solteiro(a)
+                                </label>
+                                <label>
+                                    <input type="radio" name="civil-state" id="">
+                                    Casado(a)
+                                </label>
+                                <label>
+                                    <input type="radio" name="civil-state" id="">
+                                    Viúvo(a)
+                                </label>
+                            </div>
+                        </div>
+                        <label for="civil-state-children"><strong>----------------- Você tem filhos? -----------------</strong></label>
+                        <div class="quest-4">
+                            <label>
+                                <input type="radio" name="civil-state-children" id="">
+                                Sim
+                            </label>
+                            <label>
+                                <input type="radio" name="civil-state-children" id="">
+                                Não
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="certificados">
+                    <div class="certificados-de-campo">
+                        <label class="certificado-titulo" for="civil-certified"><strong>Marque a seguir alguma especialidade sua</strong></label>
+                        <label for="certificado1"><input type="checkbox" name="certificado1" value="Engenheiro-planetario" id=""> Engenheiro Planetário</label>
+                        <label for="certificado2"><input type="checkbox" name="certificado2" value="Engenheiro-interplanetario" id=""> Engenheiro Interplanetário</label>
+                        <label for="certificado3"><input type="checkbox" name="certificado3" value="programador" id=""> Programador</label>
+                        <label for="certificado4"><input type="checkbox" name="certificado4" value="mecanico-de-naves" id=""> Mecânico de Naves</label>
+                        <label for="certificado5"><input type="checkbox" name="certificado5" value="mecanico" id=""> Mecânico</label>
+                        <label for="certificado6"><input type="checkbox" name="certificado6" value="biologo" id=""> Biólogo</label>
+                        <label for="certificado7"><input type="checkbox" name="certificado7" value="biomedico" id=""> Biomédico</label>
+                        <label for="certificado8"><input type="checkbox" name="certificado8" value="cirurgiao" id=""> Cirurgião</label>
+                        <label for="certificado9"><input type="checkbox" name="certificado9" value="soldado-policial" id=""> Soldado/Policial</label>
+                        <label for="certificado10"><input type="checkbox" name="certificado10" value="outro" id=""> Outro</label>
+                    </div>
+                </fieldset>
+                <div class="campo">
+                    <br>
+                    <label for="experiencia"><strong>Por que você quer entrar para a Alterra?</strong></label>
+                    <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                </div>
+                <div class="btn"><button class="botao" type="submit" onsubmit="">Alistar-se</button></div>
+            </form>
         </section>
         <section class="right-section">
-            a
+            
         </section>
     </main>
+    <footer><p>Feito por Bruno de Queiróz / Projeto Entra 21 - Curso C# SENAI SESI</p></footer>
+    <script>
+        function formatCPF(input) {
+        var cpf = input.value.replace(/\D/g, '');
+        cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        input.value = cpf;
+    }
+    </script>
 </body>
 </html>
