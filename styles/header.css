@@ -1,14 +1,13 @@
-body, html {
-    height: 100%;
-    margin: 0;
-}
 .bg-video {
     position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: -100;
 }
 
@@ -17,7 +16,6 @@ body, html {
 header {
     font-family: 'Exo', sans-serif;
     font-weight: 800;
-    width: 100%;
     height: 65px;
     display: flex;
     align-items: center;
@@ -118,4 +116,87 @@ header {
 .cta3:hover .hover3:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@media screen and (max-width: 1024px) {
+    .bg-video {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg-video {
+        left: -50%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .hover1, .hover2, .hover3 {
+        font-size: 15px;
+        margin: 0;
+        padding: 8px;
+    }
+    .header-alterralogo {
+        width: 50px;
+    }
+    .header-AlterraText {
+        width: 110px;
+    }
+    .left-header-logo {
+        width: 30%;
+    }
+    .right-header-content {
+        width: 66%;
+    }
+}
+@media screen and (max-width: 560px) {
+    .bg-video {
+        left: -60%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .header-alterralogo {
+        width: 45px;
+    }
+    .header-AlterraText {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 425px) {
+    header {
+        margin-top: 6px;
+    }
+    .bg-video {
+        left: -95%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .right-header-content {
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .right-header-content {
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .right-header-content {
+        margin-left: 10px;
+    }
+    .header-alterralogo {
+        width: 30px;
+    }
+    .header-AlterraText {
+        width: 100px;
+    }
+}
+@media screen and (max-width: 320px) {
+    header {
+        flex-direction: column;
+    }
+    .left-header-logo {
+        justify-content: center;
+        margin-bottom: 2px;
+    }
 }
