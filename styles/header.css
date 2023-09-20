@@ -18,9 +18,20 @@ header {
     font-weight: 800;
     height: 65px;
     display: flex;
+}
+
+a {
+    display: flex;
     align-items: center;
 }
 
+/* PARTE ESQUEDA */
+.left-header-logo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+/* LOGO */
 .header-alterralogo {
     width: 65px;
     margin-left: 20px;
@@ -30,17 +41,14 @@ header {
     margin-left: 5px;
 }
 
-.left-header-logo {
-    width: 50%;
-    display: flex;
-    align-items: center;
-}
+/*=== PARTE DIREITA ===*/
 .right-header-content {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: end;
 }
+
 /* Links */
 .hover1, .hover2, .hover3 {
     padding: 15px;
@@ -49,17 +57,17 @@ header {
     text-decoration: none;
     font-size: 20px;
 }
-
 .index {
     margin: 0;
 
 }
-/* Efeito Hover Home */
-.hover1 {
+
+/* Efeito Hover */
+.hover1, .hover2, .hover3 {
     position: relative;
     color: white;
 }
-.hover1:after {
+.hover1:after , .hover2:after , .hover3:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -71,49 +79,7 @@ header {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-.cta1:hover .hover1:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-/* Efeito Hover Sobre */
-.hover2 {
-    position: relative;
-    color: white;
-}
-.hover2:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.cta2:hover .hover2:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-/* Efeito Hover Alistamento */
-.hover3 {
-    position: relative;
-    color: white;
-}
-.hover3:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-.cta3:hover .hover3:after {
+.cta1:hover .hover1:after , .cta2:hover .hover2:after , .cta3:hover .hover3:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -123,7 +89,16 @@ header {
         height: 100%;
     }
 }
-
+@media screen and (max-width: 885px) {
+    .bg-video {
+        left: -50%;
+    }
+}
+@media screen and (max-width: 835px) {
+    .bg-video {
+        left: -50%;
+    }
+}
 @media screen and (max-width: 768px) {
     .bg-video {
         left: -50%;
@@ -191,12 +166,18 @@ header {
         width: 100px;
     }
 }
+@media screen and (max-width: 360px) {
+    .header-AlterraText {
+        width: 85px;
+    }
+}
 @media screen and (max-width: 320px) {
     header {
-        flex-direction: column;
+        align-items: center;
     }
     .left-header-logo {
         justify-content: center;
         margin-bottom: 2px;
+        flex-direction: row;
     }
 }

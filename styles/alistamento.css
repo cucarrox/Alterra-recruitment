@@ -1,19 +1,16 @@
 * {
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
     min-height: 100vh;
     margin: 0;
 }
-
 .container {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
-  
+}
 main {
     flex: 1;
     display: flex;
@@ -24,17 +21,23 @@ main {
 /*=== Secton esquerda ===*/
 .left-section {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
 }
 form {
+    float: right;
     width: 80%;
     border: 2px solid white;
     font-family: 'Exo', sans-serif;
     backdrop-filter: blur(10px);
     border-radius: 30px;
 }
+
+/*===== Formulario style =====*/
+
+label, input {
+    color: white;
+}
+
+/* CPF e NOME */
 .form-control {
     position: relative;
     margin: 20px 0 30px;
@@ -81,63 +84,54 @@ form {
     transform: translateY(-30px);
 }
 
-label, input {
-    color: white;
-}
-
+/* Fieldset CPF e NOME */
 .campo-nome-cpf {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0;
     border: none;
 }
 
-.campo-estado {
+/* PERGUNTAS CIVIS */
+.campo-estado-civil {
+    text-align: center;
     margin-top: 15px;
     padding: 0;
     border: none;
 }
 
-.questions-1 {
+.top-form-quest {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.quest-3 {
-    text-align: center;
-}
-
-.quest-3-quests {
-    margin: 20px;
-} .quest-3-quests input {
-    border-radius: 5px;
-}
-
-.quest-4 {
+.civil-status-quest, .civil-status-children-quest {
     margin: 20px;
 }
 
+/* CERTIFICADOS */
 .certificados {
-    padding: 0;
     border: none;
 }
 
 .certificados-de-campo {
     display: grid;
     justify-content: center;
-} .certificado-titulo {
+} 
+.certificado-titulo {
     margin-bottom: 10px;
 }
+
 .campo {
     display: grid;
     text-align: center;
-} .campo label {
+} 
+.campo label {
     margin-bottom: 10px;
-} .campo textarea {
+} 
+.campo textarea {
+    width: 90%;
     justify-self: center;
     border: none;
     outline: none;
@@ -148,7 +142,6 @@ label, input {
     display: flex;
     justify-content: center;
 }
-
 button {
     font-family: 'Exo', sans-serif;
     font-weight: 700;
@@ -164,31 +157,137 @@ button {
 } button:active {
     background: rgb(156, 156, 156);
 }
+
 /*=== Section Direita ===*/
 .right-section {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-} .aurora {    
+} 
+.aurora {    
     margin-left: 70px;
     align-self: center;
     margin-top: 20px;
     width: 700px;
-} .propagandas {    
+} 
+.propagandas {    
     margin-left: 70px;
     display: flex;
     justify-content: center;
     float: left;
 }
- .propagandas img {
+.propagandas img {
     width: 250px;
     margin-top: 5px;
     margin-right: 30px;
 }
+
 footer {
     width: 100%;
     color: white;
     text-align: center;
     bottom: 0;
+}
+
+/*===== ALISTAMENTO SCREEN =====*/
+@media screen and (max-width: 1440px) {
+    .left-section {
+        width: 35%;
+    }
+    .aurora {
+        width: 600px;
+    }
+    .propagandas img {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .left-section {
+        width: 40%;
+    }
+    .aurora {
+        width: 500px;
+    }
+    .propagandas img {
+        width: 180px;
+    }
+}
+@media screen and (max-width: 884px) {
+    main {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .left-section {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+    }
+    .right-section {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .propagandas {
+        margin: 0;
+    }
+    .aurora {
+        margin-left: 0;
+    }
+    .certificados-de-campo input {
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 428px) {
+    .left-section {
+        width: 100%;
+        display: grid;
+    }
+    .campo-estado-civil {
+        font-size: 13.5px;
+    }
+    form {
+        justify-self: center;
+        width: 90%;
+        float: none;
+    }
+    .aurora {
+        width: 380px;
+    }
+    .propagandas img {
+        width: 110px;
+        margin-right: 0;
+        margin: 10px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 360px) {
+    form {
+        width: 95%;
+    }
+    .aurora {
+        width: 330px;
+    }
+    .propagandas img {
+        width: 100px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .campo-estado-civil {
+        font-size: 13px;
+    }
+    .aurora {
+        width: 290px;
+    }
+    .propagandas img {
+        width: 86px;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
