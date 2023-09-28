@@ -11,7 +11,10 @@
     <link rel="shortcut icon" href="imagens/alterra-icon.ico" type="image/x-icon">
     <title>Alterra</title>
 </head>
-<body>
+<body onload="loading()">
+    <div class="box-load">
+        <div class="pre"></div>
+    </div>
     <div class="container">
         <header>
             <div class="left-header-logo">
@@ -87,5 +90,11 @@
         </main>
         <footer><p style="margin: 0;">Feito por Bruno de Queiróz / Projeto Entra 21 - Curso C# SENAI SESI</p></footer>
     </div>
+    <script>
+        function loading() {
+            document.getElementsByClassName('box-load')[0].style.display = "none"
+            document.getElementsByClassName('container')[0].style.display = "flex"
+        }
+    </script>
 </body>
 </html>

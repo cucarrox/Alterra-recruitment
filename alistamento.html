@@ -11,7 +11,10 @@
     <link rel="shortcut icon" href="imagens/alterra-icon.ico" type="image/x-icon">
     <title>Alterra</title>
 </head>
-<body>
+<body onload="loading()">
+    <div class="box-load">
+        <div class="pre"></div>
+    </div>
     <div class="container">
         <header>
             <div class="left-header-logo">
@@ -128,6 +131,10 @@
         cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
         input.value = cpf;
     }
+        function loading() {
+            document.getElementsByClassName('box-load')[0].style.display = "none"
+            document.getElementsByClassName('container')[0].style.display = "flex"
+        }
     </script>
 </body>
 </html>
